@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <title>Lista de Tareas</title>
+    <style>
+        body {
+            background-color: rgb(26, 26, 26);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #contenedor {
+            max-width: 400px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background-color: black;
+        }
+        .button {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        .input {
+            margin-bottom: 1rem;
+        }
+        .is-selected{
+            border: 2px solid #3273dc;
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor" class="box">
+        <h1 class="title is-4 has-text-centered has-text-white">Lista de Tareas</h1>
+        <form id="tareaForm" action="javascript:void(0);">
+            <input type="text" id="tareaInput" class="input is-primary is-rounded" placeholder="Nueva tarea">
+            <div class="columns is-mobile">
+                <div class="column has-text-centered">
+                    <button type="button" id="agregarBtn" class="button is-primary is-fullwidth">Agregar</button>
+                </div>
+                <div class="column has-text-centered">
+                    <button type="button" class="button is-info is-fullwidth">Terminar</button>
+                </div>
+                <div class="column has-text-centered">
+                    <button type="button" class="button is-danger is-fullwidth">Eliminar</button>
+                </div>
+            </div>
+        </form>
+        <div>
+            <label class="label has-text-centered has-text-white">Tareas agregadas</label>
+            <div id="tareas" class="box has-background-grey-dark has-text-white">
+            </div>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
